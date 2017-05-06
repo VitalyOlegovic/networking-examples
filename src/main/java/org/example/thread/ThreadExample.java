@@ -1,6 +1,6 @@
 package org.example.thread;
 
-public class PrimoEsempio implements Runnable {
+public class ThreadExample implements Runnable {
     
     @Override
     public void run() {
@@ -12,7 +12,7 @@ public class PrimoEsempio implements Runnable {
         Thread t = Thread.currentThread();
         System.out.println( "Nome del thread attuale: " + t.getName() );
         
-        PrimoEsempio pe = new PrimoEsempio();
+        ThreadExample pe = new ThreadExample();
         Thread t1 = new Thread(pe);
         Thread t2 = new Thread(pe);
         
