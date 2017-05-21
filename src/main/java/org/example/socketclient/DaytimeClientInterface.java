@@ -12,7 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
-public class SocketClientInterface extends Application {
+public class DaytimeClientInterface extends Application {
     
     TextField tfHost;
     TextField tfPort;
