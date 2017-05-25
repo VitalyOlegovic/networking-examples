@@ -1,4 +1,4 @@
-package org.example;
+package org.example.streams.output;
 
 import java.io.BufferedOutputStream;
 import java.io.FileNotFoundException;
@@ -12,7 +12,7 @@ public class BuffOutExample {
             FileOutputStream fos = new FileOutputStream("data.txt");
             BufferedOutputStream bos = new BufferedOutputStream(fos);
         ){
-            bos.write(47);
+            bos.write("47".getBytes());
             bos.close();
             fos.close();
         }catch(IOException e){

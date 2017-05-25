@@ -2,6 +2,7 @@ package org.example;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.example.streams.input.CharactersReader;
 import org.junit.Test;
 
 import java.io.ByteArrayInputStream;

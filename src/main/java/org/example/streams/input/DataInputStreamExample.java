@@ -1,11 +1,22 @@
-package org.example;
+package org.example.streams.input;
 
-import java.io.ByteArrayInputStream;
-import java.io.DataInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 
 public class DataInputStreamExample {
+
+    public String leggiTutto(DataInputStream stream) {
+        StringBuilder sb = new StringBuilder();
+        try {
+            String s = stream.readUTF();
+            sb.append(s);
+        } catch(EOFException eofe){
+            return sb.toString();
+        }catch (IOException e) {
+            e.printStackTrace();
+        }
+        return sb.toString();
+    }
+
     public static void main(String[] args){
         try(
             InputStream is = new ByteArrayInputStream("Ciao ciao".getBytes());
