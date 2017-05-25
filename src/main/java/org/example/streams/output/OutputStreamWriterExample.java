@@ -15,6 +15,7 @@ public class OutputStreamWriterExample {
         for(String s : list){
             w.write(s);
         }
+        w.flush();
     }
 
     static void scriviTutto(
@@ -24,6 +25,7 @@ public class OutputStreamWriterExample {
             String s = iterator.next();
             w.write(s);
         }
+        w.flush();
     }
 
     public static void main(String[] args){
