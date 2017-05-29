@@ -12,7 +12,9 @@ public class DaytimeServer {
     public final static int PORT = 13;
 
     public static void main(String[] args) {
-        try (ServerSocket server = new ServerSocket(PORT)) {
+        try (
+                ServerSocket server = new ServerSocket(PORT)
+        ) {
             while (true) {
                 try (Socket connection = server.accept()) {
                     Writer out = new OutputStreamWriter(connection.getOutputStream());
